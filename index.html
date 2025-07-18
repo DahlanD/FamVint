@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FamVint - Thriftwear Bandung</title>
+  <title>FamVint - Aksesoris Vespa Modern</title>
 
-  <!-- Font & SEO -->
+  <!-- Typography & Favicon -->
+  <link rel="icon" href="famvint-logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="FamVint - Thriftwear curated by Fam & Vint. Affordable. Authentic. Always you. Based in Bandung.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FamVint - Thriftwear Bandung">
-  <meta property="og:description" content="Affordable. Authentic. Always you.">
-  <meta property="og:image" content="https://namadomainmu.com/famvint-logo.png">
-  <meta property="og:url" content="https://namadomainmu.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="famvint-logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -26,259 +19,197 @@
     }
 
     body {
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a1a2a 100%);
-      color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      line-height: 1.6;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem 1rem;
-      text-align: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
+      justify-content: center;
+      padding: 3rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    /* Animated background particles */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 50%, rgba(120, 60, 255, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 20%, rgba(255, 120, 200, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 40% 80%, rgba(120, 255, 200, 0.1) 0%, transparent 50%);
-      animation: float 15s ease-in-out infinite;
-      z-index: -1;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      33% { transform: translateY(-20px) rotate(1deg); }
-      66% { transform: translateY(10px) rotate(-1deg); }
-    }
-
-    /* Logo container with glow effect */
     .logo-container {
-      position: relative;
-      margin: 2rem 0;
-      animation: fadeInUp 1s ease-out;
+      margin-bottom: 2rem;
     }
 
-    .logo-container::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-      border-radius: 24px;
-      opacity: 0.7;
-      filter: blur(20px);
-      animation: glow 2s ease-in-out infinite alternate;
-      z-index: -1;
+    .logo-container img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: opacity 0.3s ease;
     }
 
-    @keyframes glow {
-      0% { opacity: 0.7; transform: scale(0.95); }
-      100% { opacity: 0.4; transform: scale(1.05); }
+    .logo-container img:hover {
+      opacity: 0.8;
     }
 
-    img {
-      max-width: 160px;
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    img:hover {
-      transform: scale(1.05) rotate(1deg);
-    }
-
-    h1 {
+    .brand-name {
+      font-family: 'Crimson Text', serif;
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 400;
+      color: #ffffff;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 1s ease-out 0.3s both;
-      text-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+      text-align: center;
+      letter-spacing: 0.02em;
     }
 
     .tagline {
-      max-width: 600px;
       font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1s ease-out 0.6s both;
-      line-height: 1.6;
+      color: #999;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      font-weight: 300;
     }
 
     .location {
       font-size: 0.9rem;
-      color: #999;
+      color: #666;
       margin-bottom: 3rem;
-      animation: fadeInUp 1s ease-out 0.9s both;
-      opacity: 0.8;
+      text-align: center;
+      font-weight: 300;
     }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .features {
+      margin: 2rem 0 3rem;
+      text-align: center;
+    }
+
+    .feature-list {
+      list-style: none;
+      font-size: 0.95rem;
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    .feature-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-section {
       width: 100%;
-      max-width: 350px;
-      animation: fadeInUp 1s ease-out 1.2s both;
+      max-width: 320px;
     }
 
-    a {
-      background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
-      color: #fff;
-      padding: 1.2rem 2rem;
-      border-radius: 16px;
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      color: #ffffff;
       text-decoration: none;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      font-weight: 400;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      letter-spacing: 0.02em;
     }
 
-    a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.6s ease;
+    .cta-button:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
     }
 
-    a:hover::before {
-      left: 100%;
+    .cta-button.primary {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
 
-    a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .shopee-link:hover {
-      background: linear-gradient(135deg, #ff6b35, #ff8e35);
-      box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
-    }
-
-    .whatsapp-link:hover {
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
-    }
-
-    .instagram-link:hover {
-      background: linear-gradient(135deg, #e4405f, #833ab4, #fd1d1d);
-      box-shadow: 0 12px 40px rgba(228, 64, 95, 0.4);
+    .cta-button.primary:hover {
+      background: #f0f0f0;
     }
 
     .footer {
-      margin-top: 4rem;
-      font-size: 0.8rem;
-      color: #666;
-      animation: fadeInUp 1s ease-out 1.5s both;
-      opacity: 0.7;
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #555;
+      font-weight: 300;
+      letter-spacing: 0.05em;
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    /* Floating elements */
-    .floating-element {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      animation: floatAround 10s infinite linear;
-    }
+    .fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in:nth-child(4) { animation-delay: 0.4s; }
+    .fade-in:nth-child(5) { animation-delay: 0.5s; }
+    .fade-in:nth-child(6) { animation-delay: 0.6s; }
 
-    @keyframes floatAround {
-      0% { transform: translateY(100vh) rotate(0deg); }
-      100% { transform: translateY(-10vh) rotate(360deg); }
-    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
 
-    /* Responsive */
-    @media (max-width: 480px) {
-      h1 {
+      .brand-name {
         font-size: 2.5rem;
       }
 
       .tagline {
         font-size: 1rem;
       }
-
-      a {
-        padding: 1rem 1.5rem;
-      }
-
-      .links {
-        max-width: 300px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .tagline {
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
 <body>
-  <!-- Floating background elements -->
-  <div class="floating-element" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="floating-element" style="left: 20%; animation-delay: 2s;"></div>
-  <div class="floating-element" style="left: 30%; animation-delay: 4s;"></div>
-  <div class="floating-element" style="left: 40%; animation-delay: 6s;"></div>
-  <div class="floating-element" style="left: 50%; animation-delay: 8s;"></div>
-  <div class="floating-element" style="left: 60%; animation-delay: 1s;"></div>
-  <div class="floating-element" style="left: 70%; animation-delay: 3s;"></div>
-  <div class="floating-element" style="left: 80%; animation-delay: 5s;"></div>
-  <div class="floating-element" style="left: 90%; animation-delay: 7s;"></div>
+  <div class="container">
+    <div class="logo-container fade-in">
+      <img src="famvint-logo.png" alt="Logo FamVint - Aksesoris Vespa Modern" />
+    </div>
 
-  <div class="logo-container">
-    <img src="famvint-logo.png" alt="Logo FamVint" />
-  </div>
-  
-  <h1>FamVint</h1>
-  <p class="tagline">Thriftwear curated by Fam & Vint<br>Affordable. Authentic. Always you.</p>
-  <p class="location">📍 Based in Bandung</p>
+    <h1 class="brand-name fade-in">FamVint</h1>
+    <p class="tagline fade-in">Modern Vespa Accessories for Everyday Ride</p>
+    <p class="location fade-in">🛵 Bandung · Est. 2024</p>
 
-  <div class="links">
-    <a href="https://shopee.co.id/famvint" target="_blank" aria-label="Shopee FamVint" class="shopee-link">🛒 Beli di Shopee</a>
-    <a href="https://wa.me/6287812841226" target="_blank" aria-label="WhatsApp FamVint" class="whatsapp-link">💬 Chat via WhatsApp</a>
-    <a href="https://instagram.com/famvint_" target="_blank" aria-label="Instagram FamVint" class="instagram-link">📷 Instagram</a>
-  </div>
+    <div class="features fade-in">
+      <ul class="feature-list">
+        <li>🧳 Sidebags & Storage</li>
+        <li>💡 Lighting & Covers</li>
+        <li>🔩 Custom Parts for Urban Ride</li>
+      </ul>
+    </div>
 
-  <div class="footer">
-    © 2025 FamVint. All rights reserved.
+    <div class="cta-section fade-in">
+      <a href="https://shopee.co.id/famvint" target="_blank" class="cta-button primary">
+        🛒 Shop Collection on Shopee
+      </a>
+      <a href="https://wa.me/6287812841226" target="_blank" class="cta-button">
+        💬 WhatsApp Us Now
+      </a>
+      <a href="https://instagram.com/famvint_" target="_blank" class="cta-button">
+        📷 See Latest on Instagram
+      </a>
+    </div>
+
+    <div class="footer fade-in">
+      <p>© 2025 FamVint. All rights reserved.</p>
+    </div>
   </div>
 </body>
 </html>
